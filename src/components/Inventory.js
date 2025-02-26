@@ -50,17 +50,17 @@ const Inventory = () => {
 
   return (
     <div>
-      <h2>Inventory Management</h2>
+      <h2 className="text-center">Inventory Management</h2>
 
       {user ? (
-         <Container className="mt-4">
-         <h2>Manage Your Inventory</h2>
+         <Container className="mt-5">
+         <h2 className="text-center">Manage Your Inventory</h2>
    
          {/* Expiry Notifications */}
          {notifications.length > 0 && (
-           <Alert variant="warning">
+           <Alert variant="warning" className="text-center">
              <strong>⚠ Warning:</strong> These items are expiring soon:
-             <ul>
+             <ul className="list-unstyled">
                {notifications.map((item) => (
                  <li key={item.id}>{item.name} - Expires on {item.expiryDate}</li>
                ))}
@@ -88,7 +88,7 @@ const Inventory = () => {
          </Form>
    
          {/* Inventory List */}
-         <Table striped bordered hover>
+         <Table striped bordered hover className="text-center">
            <thead>
              <tr>
                <th>Item</th>
@@ -119,7 +119,7 @@ const Inventory = () => {
          </Table>
        </Container>
       ) : (
-        <p>Please log in to access your inventory.</p>
+        <p className="text-center mt-4">Please log in to access your inventory.</p>
       )}
     </div>
   );

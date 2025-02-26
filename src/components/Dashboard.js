@@ -48,8 +48,8 @@ const Dashboard = () => {
       <h2>Inventory Dashboard</h2>
 
       {user ? (
-        <Container className="mt-4">
-      <Row>
+        <Container className="mt-5 text-center">
+      <Row className="justify-content-center mt-4">
         <Col md={4}>
           <Card className="text-center p-3">
             <h5>Total Items</h5>
@@ -71,7 +71,7 @@ const Dashboard = () => {
       </Row>
     </Container>
       ) : (
-        <p>Please log in to view your dashboard.</p>
+        <p className="mt-4">Please log in to view your dashboard.</p>
       )}
     </div>
   );

@@ -11,9 +11,9 @@ function Header({ title }) {
   };
 
   return (
-    <nav className="navbar navbar-dark bg-dark">
-      <div className="container">
-        <Link to="/" className="navbar-brand">{title}</Link>
+    <nav className="navbar navbar-dark bg-dark py-2">
+      <div className="container d-flex justify-content-center">
+        <Link to="/" className="navbar-brand title-center w-100 mb-0">{title}</Link>
         <div>
           {isAuthenticated ? (
             <>
