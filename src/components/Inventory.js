@@ -99,9 +99,11 @@ const Inventory = () => {
            </thead>
            <tbody>
              {items.map((item) => {
-               const isExpired = new Date(item.expiryDate) < new Date();
+               const isExpired = new Date(item.expiryDate).getTime() < new Date().getTime();
+
                return (
-                 <tr key={item.id} style={{ color: isExpired ? "red" : "black" }}>
+                <tr key={item.id} className={isExpired ? "table-danger" : ""}>
+
                    <td>{item.name}</td>
                    <td>{item.quantity}</td>
                    <td>{item.expiryDate}</td>
